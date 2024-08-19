@@ -1,0 +1,68 @@
+@use 'hero';
+@use 'variaveis';
+@use 'intro';
+@use 'personagens';
+@use 'arcos';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: variaveis.$corDeFundo;
+}
+
+@mixin text($fontSize: 16px) {
+    font-size: $fontSize;
+    line-height: $fontSize + 10;
+    color: variaveis.$corTextoPrincipal;
+}
+
+@mixin title($fontSize: 32px) {
+    @include text($fontSize);
+    color: variaveis.$corTextoPrincipal;
+}
+
+.text--big {
+    @include text(18px);
+}
+
+.text--small {
+    @include text(12px);
+}
+
+.text {
+    @include text;
+}
+
+.title--big {
+    @include title(44px);
+}
+
+.title--small {
+    @include title(22px);
+}
+
+.title {
+    @include title;
+}
+
+.button {
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 60px;
+    font-size: 18px;
+    color: variaveis.$corTextBtn;
+    background-color: variaveis.$corBtnPrimary;
+    border: 1px solid variaveis.$corBtnPrimary;
+    text-transform: uppercase;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 0.5rem 0.875rem;
+    letter-spacing: 1px;
+    list-style: none;
+}

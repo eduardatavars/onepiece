@@ -1,0 +1,55 @@
+@use 'variaveis';
+
+.personagens {
+    padding: 5.6vw;
+    background-color: variaveis.$corTextoPrincipal;
+
+    h2 {
+        text-align: center;
+        color: variaveis.$corTitleSecundary;
+        margin-bottom: 60px;
+    }
+
+    &__card {
+        margin-top: 2rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px 20px;
+        align-items: center;
+        justify-content: center;
+
+        figure {
+            width: 200px;
+            height: 200px;
+            border-radius: 40rem;
+            overflow: hidden;
+            cursor: pointer;
+            position: relative;
+
+            img {
+                object-fit: cover;
+            }
+
+            &:hover img {
+                transform: scale(1.1);
+            }
+
+            figcaption {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                background-color: rgba(0, 0, 0, 0.7); /* Fundo semi-transparente */
+                color: white;
+                text-align: center;
+                padding: 10px;
+                opacity: 0;
+                transition: opacity 0.5s ease;
+            }
+
+            &:hover figcaption {
+                opacity: 1;
+            }
+        }
+    }
+}
