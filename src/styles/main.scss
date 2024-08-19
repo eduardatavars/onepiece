@@ -2,7 +2,7 @@
 @use 'variaveis';
 @use 'intro';
 @use 'personagens';
-@use 'arcos';
+@use 'frutas';
 
 * {
     margin: 0;
@@ -65,4 +65,42 @@ body {
     padding: 0.5rem 0.875rem;
     letter-spacing: 1px;
     list-style: none;
+
+    a {
+        color: variaveis.$corTextBtn;
+        background-color: variaveis.$corBtnPrimary;
+        border: 1px solid variaveis.$corBtnPrimary;
+        text-decoration: none;
+    }
+
+    &:hover {
+        background-color: variaveis.$corTextBtn;
+        border: 1px solid variaveis.$corTextBtn;
+        color: #000;
+
+        a {
+            background-color: variaveis.$corTextBtn;
+            border: 1px solid variaveis.$corTextBtn;
+            color: #000;
+        }
+    }
+}
+
+.footer {
+    padding: 26px 8px;
+    background-color: variaveis.$corTextBtn;
+
+    &__container {
+        max-width: 1024px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+
+        p {
+            a {
+                color: variaveis.$corBtnPrimary;
+                text-decoration: none;
+            }
+        }
+    }
 }

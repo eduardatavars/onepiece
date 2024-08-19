@@ -12,6 +12,15 @@
         grid-template-columns: 1fr 1fr;
         margin-top: 60px;
 
+        @media (max-width: 768px) {
+            display: block;
+
+            img {
+                width: 427px;
+                height: 341px;
+            }
+        }
+
         &__text {
             padding: 0 2vw;
 
@@ -24,6 +33,10 @@
                 margin: 20px 50px 0;
                 letter-spacing: 1px;
                 text-align: justify;
+
+                @media (max-width: 768px) {
+                    letter-spacing: normal;
+                }
 
                 &:last-child {
                     margin-top: 20px;

@@ -1,0 +1,114 @@
+@use 'variaveis';
+
+@mixin frutaIsActive {
+    position: relative;
+    width: 224px;
+    height: 274px;
+    top: -10px;
+    opacity: 1;
+    box-shadow: 2px 2px 35px #9c9aa7;
+    -webkit-filter: grayscale(0);
+    cursor: pointer;
+    transition: width .5s ease-in-out, height .3s ease-in-out;
+}
+
+@mixin frutaImgStyle {
+    -webkit-filter: grayscale(1);
+    border-radius: 10px;
+    margin: 5px;
+    opacity: 1;
+    object-fit: cover;
+
+    &:hover {
+        position: relative;
+        top: -10px;
+        opacity: 1;
+        box-shadow: 2px 2px 35px #9c9aa7;
+        -webkit-filter: grayscale(0);
+        cursor: pointer;
+        transition: width .5s ease-in-out, height .3s ease-in-out;
+    }
+}
+
+.frutas {
+    padding: 5.6vw;
+
+    h2 {
+        text-align: center;
+    }
+
+    @media (max-width: 768px) {
+        max-width: 640px;
+    }
+
+   &__cards {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        margin-top: 60px;
+        text-align: center;
+
+        @media (max-width: 768px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .fruta {
+            margin-bottom: 32px;
+
+            img {
+                width: 200px;
+                height: 250px;
+                @include frutaImgStyle();
+
+                &:hover {
+                    width: 224px;
+                    height: 274px;
+                    @include frutaImgStyle();
+                }
+
+                &.one {
+                    &.--isActive {
+                        @include frutaIsActive();
+                    }
+                }
+
+                &.two {
+                    &.--isActive {
+                        @include frutaIsActive();
+                    }
+                }
+
+                &.three {
+                    &.--isActive {
+                        @include frutaIsActive();
+                    }
+                }
+            }
+
+            &__text {
+                padding: 8px;
+                text-align: left;
+                
+
+                :first-child {
+                    margin-bottom: 16px;
+                }
+
+                &--inactive {
+                    display: none;
+                }
+            }
+
+            p {
+                text-align: center;
+            }
+
+            &--active {
+                display: block;
+            }
+        }
+   } 
+
+}

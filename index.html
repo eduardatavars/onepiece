@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="shortcut icon" href="dist/img/logo/icon.ico" type="image/x-icon">
+    <title>One Piece</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
@@ -13,7 +14,7 @@
     <section class="hero">
         <div class="hero__content">
             <div class="hero__content__branding">
-                <img src="./dist/img/logo/onepiece_logo.jfif" alt="">
+                <img src="./dist/img/logo/logo-onepiece.png" alt="">
             </div>
             <h3 class="title">
                 Embarque na maior aventura dos sete mares.
@@ -25,21 +26,18 @@
             </p>
             <ul class="hero__content__explore">
                 <li class="hero__content__explore__categ">
-                    <button class="button">Personagens</button>
+                    <button class="button"><a href="#intro">Introdução</a></button>
                 </li>
                 <li class="hero__content__explore__categ">
-                    <button class="button">Arcos</button>
+                    <button class="button"><a href="#personagens">Personagens</a></button>
                 </li>
                 <li class="hero__content__explore__categ">
-                    <button class="button">Frutas do Diabo</button>
-                </li>
-                <li class="hero__content__explore__categ">
-                    <button class="button">Curiosidades</button>
+                    <button class="button"><a href="#frutas">Frutas do Diabo</a></button>
                 </li>
             </ul>
         </div>
     </section>
-    <section class="intro">
+    <section id="intro" class="intro">
         <h2 class="title--big">O Mundo de One Piece</h2>
         <div class="intro__conteudo">
             <img src="./dist/img/intro/img1.jpg" alt="one piece">
@@ -57,7 +55,7 @@
             </div>
         </div>
     </section>
-    <section class="personagens">
+    <section id="personagens" class="personagens">
         <h2 class="title--big">Personagens Principais</h2>
         <div class="personagens__card">
             <figure>
@@ -102,10 +100,41 @@
             </figure>
         </div>
     </section>
-    <section class="arcos">
-        <h2 class="title--big">Arcos</h2>
+    <section id="frutas" class="frutas">
+        <h2 class="title--big">Frutas do diabo</h2>
+        <div class="frutas__cards">
+            <div class="fruta">
+                <img class="one" src="./dist/img/frutas/paramecia.jpg" alt="">
+                <p class="title--small">Paramecia</p>
+            </div>
+            <div class="fruta__text fruta__text--inactive">
+                <p>Concede ao usuário poderes sobre-humanos que afetam o corpo ou o ambiente. 
+                   Exemplos incluem a Gomu Gomu no Mi (Fruta da Borracha) e a Bara Bara no Mi (Fruta da Separação).</p>
+            </div>
+            <div class="fruta">
+                <img class="two" src="./dist/img/frutas/logia.jpg" alt="">
+                <p class="title--small">Logia</p>
+            </div>
+            <div class="fruta__text fruta__text--inactive">
+                <p>Permite ao usuário se transformar e criar um elemento natural, tornando-se intangível e praticamente invulnerável a ataques físicos. 
+                   Exemplos incluem a Mera Mera no Mi (Fruta da Chama) e a Goro Goro no Mi (Fruta do Trovão).</p>
+            </div>
+            <div class="fruta">
+                <img class="three" src="./dist/img/frutas/zoan.jpg" alt="">
+                <p class="title--small">Zoan</p>
+            </div>
+            <div class="fruta__text fruta__text--inactive">
+                <p>Permite ao usuário se transformar em um animal específico, incluindo formas híbridas. Existem subtipos, como Zoan Antiga (animais extintos) e Zoan Mítica (criaturas mitológicas). 
+                   Exemplos incluem a Ushi Ushi no Mi, Modelo Bisonte e a Hito Hito no Mi (Fruta do Humano).</p>
+            </div>
+        </div>
     </section>
+    <footer class="footer">
+        <div class="footer__container">
+            <p class="text">2024 &copy; OnePiece - Desenvolvido por <a href="https://github.com/eduardatavars" target="_blank">eduardatavars</a>.</p>
+        </div>
+    </footer>
 
-    <script src="./src/scripts/main.js"></script>
+    <script src="./dist/js/main.js"></script>
 </body>
 </html>
