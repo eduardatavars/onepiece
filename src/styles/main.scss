@@ -54,7 +54,7 @@ body {
     align-items: center;
     justify-content: center;
     width: 50%;
-    height: 60px;
+    height: 70px;
     font-size: 18px;
     color: variaveis.$corTextBtn;
     background-color: variaveis.$corBtnPrimary;
@@ -71,6 +71,7 @@ body {
         background-color: variaveis.$corBtnPrimary;
         border: 1px solid variaveis.$corBtnPrimary;
         text-decoration: none;
+        gap: nowrap;
     }
 
     &:hover {
